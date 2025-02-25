@@ -21,12 +21,12 @@ namespace EFCore_2.Entities
 
 
         [InverseProperty("Department")]
-        public ICollection<Students> Students { get; set; } = new HashSet<Students>();  // many
+        public virtual ICollection<Students> Students { get; set; } = new HashSet<Students>();  // many
 
 
         [InverseProperty("Department")]
 
-        public ICollection<Instractors> Instractors { get; set; } = new HashSet<Instractors>();  // many
+        public virtual ICollection<Instractors> Instractors { get; set; } = new HashSet<Instractors>();  // many
 
 
 

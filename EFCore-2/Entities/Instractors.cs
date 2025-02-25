@@ -21,7 +21,7 @@ namespace EFCore_2.Entities
 
 
         [InverseProperty("Instractors")]
-        public Department Department { get; set; } //one
+        public virtual Department Department { get; set; } //one
 
 
         //public int DepartmentID { get; set; }//mange
@@ -29,9 +29,8 @@ namespace EFCore_2.Entities
 
 
 
-        [InverseProperty("Instractors")]
 
-        public ICollection<course_instractor> course_instractor { get; set; } = new HashSet<course_instractor>();  // many
+        public virtual ICollection<courseinstractor> instractorscourse { get; set; } = new HashSet<courseinstractor>();  // many
 
 
     }

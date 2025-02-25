@@ -15,7 +15,7 @@ namespace EFCore_2.Entities
 
 
         [InverseProperty("topics")]
-        public courses courses { get; set; }    // one
+        public virtual courses courses { get; set; }    // one
 
 
 

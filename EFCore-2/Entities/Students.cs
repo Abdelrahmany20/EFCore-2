@@ -18,11 +18,11 @@ namespace EFCore_2.Entities
 
 
         [InverseProperty("Students")]
-        public Department Department { get; set; }    // one
+        public virtual Department Department { get; set; }    // one
 
 
 
-        public ICollection<courses> courses { get; set; } = new HashSet<courses>();  // many
+        public virtual ICollection<StudentCourse> studentCourses { get; set; } = new HashSet<StudentCourse>();  // many
 
 
 
