@@ -19,12 +19,15 @@ namespace EFCore_2.Entities
         //public int top_id { get; set; }
 
         [InverseProperty("courses")]
-        public ICollection<topics> topics { get; set; } = new HashSet<topics>();  // many
+        public virtual ICollection<topics> topics { get; set; } = new HashSet<topics>();  // many
 
 
 
 
-        public ICollection<Students> Students { get; set; } = new HashSet<Students>();  // many
+        public virtual ICollection<StudentCourse> coursestudents { get; set; } = new HashSet<StudentCourse>();  // many
+
+
+        public virtual ICollection<courseinstractor> courseinstractors { get; set; } = new HashSet<courseinstractor>();  // many
 
 
     }

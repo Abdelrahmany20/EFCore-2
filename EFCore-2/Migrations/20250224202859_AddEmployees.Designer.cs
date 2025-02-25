@@ -4,6 +4,7 @@ using EFCore_2.contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCore_2.Migrations
 {
     [DbContext(typeof(schemaDBcontext))]
-    partial class schemaDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20250224202859_AddEmployees")]
+    partial class AddEmployees
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace EFCore_2.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Department", (string)null);
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.Instractors", b =>
@@ -74,7 +77,7 @@ namespace EFCore_2.Migrations
 
                     b.HasIndex("DepartmentID");
 
-                    b.ToTable("Instractors", (string)null);
+                    b.ToTable("Instractors");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.StudentCourse", b =>
@@ -92,7 +95,7 @@ namespace EFCore_2.Migrations
 
                     b.HasIndex("CourseID");
 
-                    b.ToTable("StudentCourse", (string)null);
+                    b.ToTable("StudentCourse");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.Students", b =>
@@ -125,7 +128,7 @@ namespace EFCore_2.Migrations
 
                     b.HasIndex("DepartmentID");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.courseinstractor", b =>
@@ -143,7 +146,7 @@ namespace EFCore_2.Migrations
 
                     b.HasIndex("instractorID");
 
-                    b.ToTable("courseinstractor", (string)null);
+                    b.ToTable("courseinstractor");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.courses", b =>
@@ -167,7 +170,7 @@ namespace EFCore_2.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("courses", (string)null);
+                    b.ToTable("courses");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.topics", b =>
@@ -189,7 +192,7 @@ namespace EFCore_2.Migrations
 
                     b.HasIndex("coursesid");
 
-                    b.ToTable("topics", (string)null);
+                    b.ToTable("topics");
                 });
 
             modelBuilder.Entity("EFCore_2.session3.FullTimeEmployee", b =>
@@ -219,7 +222,7 @@ namespace EFCore_2.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("FullTimeEmployees", (string)null);
+                    b.ToTable("FullTimeEmployees");
                 });
 
             modelBuilder.Entity("EFCore_2.session3.PartTimeEmployee", b =>
@@ -249,7 +252,7 @@ namespace EFCore_2.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("PartTimeEmployees", (string)null);
+                    b.ToTable("PartTimeEmployees");
                 });
 
             modelBuilder.Entity("EFCore_2.Entities.Instractors", b =>
